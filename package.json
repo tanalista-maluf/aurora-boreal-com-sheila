@@ -1,0 +1,20 @@
+{
+  "name": "aurora-boreal-com-sheila",
+  "version": "1.0.0",
+  "description": "Aurora Boreal com Sheila Mello — Uma expedição ao Ártico",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "preview": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "aurora",
+    "arctic",
+    "expedition",
+    "iceland",
+    "norway",
+    "lapland"
+  ],
+  "author": "Ricardo Maluf",
+  "license": "UNLICENSED"
+}

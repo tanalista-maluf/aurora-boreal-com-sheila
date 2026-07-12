@@ -509,7 +509,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
 @media (max-width:720px){
   .miniheader__nav{display:none}
   .miniheader__menu-btn{display:flex}
-  .miniheader{gap:8px}
+  .miniheader{gap:8px;justify-content:flex-start}
+  .miniheader__logo{flex:0 0 auto}
+  .topcta{flex:1;justify-content:center;order:2}
+  .miniheader__menu-btn{order:3;flex:0 0 auto}
   .nav__links{
     position:fixed;inset:0 0 0 auto;width:min(300px,84vw);flex-direction:column;align-items:flex-start;
     background:rgba(3,9,26,.97);backdrop-filter:blur(18px);padding:100px 30px 30px;gap:22px;

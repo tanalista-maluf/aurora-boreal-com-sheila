@@ -525,7 +525,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
   .incl{grid-template-columns:1fr}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .operadora__gallery{grid-template-columns:repeat(2,1fr)}
-  .footer__grid{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr 1fr}
+  .footer__brand{grid-column:1/-1}
   .video-note{display:none}
   /* Vídeo full-width sem bordinha no mobile */
   .hero__videobox{

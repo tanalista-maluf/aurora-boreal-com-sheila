@@ -263,6 +263,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
 }
 .topcta:hover{transform:scale(1.05)}
 .topcta svg{width:1.1em;height:1.1em}
+.topcta__text-desktop{display:inline}
+.topcta__text-mobile{display:none}
 
 /* ---------- HERO ---------- */
 .hero{
@@ -511,7 +513,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
   .miniheader__menu-btn{display:flex}
   .miniheader{gap:8px;justify-content:flex-start}
   .miniheader__logo{flex:0 0 auto}
-  .topcta{flex:1;justify-content:center;order:2}
+  .topcta{max-width:40%;justify-content:center;order:2;flex:0 0 auto;padding:.5em .8em;font-size:.75rem}
+  .topcta__text-desktop{display:none}
+  .topcta__text-mobile{display:inline}
   .miniheader__menu-btn{order:3;flex:0 0 auto}
   .nav__links{
     position:fixed;inset:0 0 0 auto;width:min(300px,84vw);flex-direction:column;align-items:flex-start;

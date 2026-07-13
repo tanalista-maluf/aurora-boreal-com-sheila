@@ -511,7 +511,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
 @media (max-width:720px){
   .miniheader__nav{display:none}
   .miniheader__menu-btn{display:flex}
-  .miniheader{gap:8px;justify-content:flex-start}
+  .miniheader{gap:8px}
   .miniheader__logo{flex:0 0 auto}
   .topcta{max-width:40%;justify-content:center;flex:0 0 auto;display:flex;align-items:center;padding:.5em .8em;font-size:.75rem;margin:0 auto}
   .topcta__text-desktop{display:none!important}

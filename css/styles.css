@@ -115,8 +115,8 @@ body::after{
 .section{position:relative;z-index:1;padding-block:clamp(64px,9vw,130px)}
 .section--tight{padding-block:clamp(48px,6vw,88px)}
 @media (min-width:721px){
-  .section{padding-block:clamp(48px,6.75vw,97.5px)}
-  .section--tight{padding-block:clamp(36px,4.5vw,66px)}
+  .section{padding-block:clamp(36px,5.0625vw,73.125px)}
+  .section--tight{padding-block:clamp(27px,3.375vw,49.5px)}
 }
 .center{text-align:center}
 

@@ -182,4 +182,16 @@ document.addEventListener("DOMContentLoaded", () => {
       heroBox.style.display = "none";   // sem vídeo, esconde a janela
     }
   }
+
+  /* --- Slider da Destino Incomum --- */
+  const slider = document.getElementById("operadoraSlider");
+  if (slider) {
+    const items = slider.querySelectorAll(".operadora__slider-item");
+    let currentIndex = 0;
+    setInterval(() => {
+      items[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % items.length;
+      items[currentIndex].classList.add("active");
+    }, 2500);
+  }
 });

@@ -517,6 +517,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
   .topcta__text-desktop{display:none!important}
   .topcta__text-mobile{display:inline!important}
   .miniheader__menu-btn{flex:0 0 auto;order:3}
+  .miniheader__menu-btn span{background-color:#8dd3c7}
+  .topcta{display:none}
   .nav__links{
     position:fixed;inset:0 0 0 auto;width:min(300px,84vw);flex-direction:column;align-items:flex-start;
     background:rgba(3,9,26,.97);backdrop-filter:blur(18px);padding:100px 30px 30px;gap:22px;

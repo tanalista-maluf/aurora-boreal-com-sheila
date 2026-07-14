@@ -466,10 +466,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
 
 /* ---------- Footer ---------- */
 .footer{background:#010614;border-top:1px solid var(--line-soft);position:relative;z-index:1}
-.footer__grid{display:grid;grid-template-columns:1fr;gap:40px;padding-block:64px 30px;justify-items:center}
-.footer__brand{text-align:center;display:flex;flex-direction:column}
-.footer__brand img{display:block;width:100%;max-width:360px;height:auto;margin:0 auto 0}
-.footer__brand p{color:#fff;font-size:.9rem;max-width:300px;margin:0 auto;margin-top:auto}
+.footer__grid{display:grid;grid-template-columns:1fr;gap:40px;padding-block:64px 30px}
+.footer__brand{text-align:left;display:flex;flex-direction:row;gap:40px;align-items:center}
+.footer__brand img{display:block;width:100%;max-width:360px;height:auto;flex-shrink:0}
+.footer__brand p{color:#fff;font-size:.9rem;margin:0;flex:1}
 .footer__brand p strong{font-weight:700}
 .footer h5{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
 /* Alinha as colunas de navegação com o texto "AURORA BOREAL" do logo */
@@ -536,7 +536,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
   .gallery{grid-template-columns:repeat(2,1fr)}
   .operadora__gallery{grid-template-columns:repeat(2,1fr)}
   .footer__grid{grid-template-columns:1fr}
-  .footer__brand{grid-column:auto}
+  .footer__brand{flex-direction:column;text-align:center;gap:20px}
+  .footer__brand img{max-width:300px}
+  .footer__brand p{text-align:center}
   .video-note{display:none}
   /* Vídeo full-width sem bordinha no mobile */
   .hero__videobox{

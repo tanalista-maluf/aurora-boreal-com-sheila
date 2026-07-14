@@ -514,7 +514,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
   .footer__grid{grid-template-columns:1fr 1fr}
   .footer__grid > div:not(.footer__brand){padding-top:0}
 }
+.br-mobile{display:none}
 @media (max-width:720px){
+  .br-mobile{display:block}
+  .hero h1{font-size:1.55rem}
+  .hero .lead{font-size:.82rem}
+  .img-top-mobile{object-position:50% 15%}
   .miniheader__nav{display:none}
   .miniheader__menu-btn{display:flex}
   .miniheader{gap:8px;justify-content:space-between}

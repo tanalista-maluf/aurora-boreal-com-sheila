@@ -426,7 +426,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
   box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;
 }
 .price-card::before{content:"";position:absolute;top:-40%;right:-20%;width:70%;height:120%;background:radial-gradient(circle,rgba(95,227,160,.16),transparent 70%);pointer-events:none}
-.price-card .from{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.price-card .from{font-size:.98rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:-20px}
 .price-card .val{font-family:var(--font-body);font-weight:700;font-size:clamp(2.4rem,4.6vw,3.3rem);color:#fff;line-height:1.05;margin:6px 0;letter-spacing:-.01em}
 .price-card .val .per{font-family:var(--font-body);font-weight:500;font-size:1.05rem;color:#fff;letter-spacing:.01em}
 .price-card .val small{font-size:1rem;color:var(--gold);display:block;font-weight:500;font-family:var(--font-body);letter-spacing:.02em;margin-top:2px}

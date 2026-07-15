@@ -530,6 +530,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.08;mar
 @media (max-width:720px){
   .hero__videobox{width:min(880px,94vw)}
   .br-mobile{display:block}
+  .sep-mobile-hide{display:none}
   .hero h1{font-size:1.55rem}
   .hero .lead{font-size:.82rem}
   .img-top-mobile{object-position:50% 15%}

@@ -162,11 +162,27 @@ document.addEventListener("DOMContentLoaded", () => {
   /* --- Vídeo de depoimento do hero (janela) --- */
   const heroVideo = document.getElementById("heroVideo");
   const heroMuteBtn = document.getElementById("heroVideoMute");
-  if (heroVideo && heroMuteBtn) {
+  const heroPlayBtn = document.getElementById("heroVideoPlay");
+  if (heroVideo && heroMuteBtn && heroPlayBtn) {
     heroMuteBtn.addEventListener("click", () => {
       heroVideo.muted = !heroVideo.muted;
       heroMuteBtn.setAttribute("aria-pressed", String(!heroVideo.muted));
       heroMuteBtn.setAttribute("aria-label", heroVideo.muted ? "Ativar som" : "Desativar som");
+    });
+    heroPlayBtn.addEventListener("click", () => {
+      if (heroVideo.paused) heroVideo.play(); else heroVideo.pause();
+    });
+    heroVideo.addEventListener("play", () => {
+      heroPlayBtn.setAttribute("aria-pressed", "true");
+      heroPlayBtn.setAttribute("aria-label", "Pausar vídeo");
+    });
+    heroVideo.addEventListener("pause", () => {
+      heroPlayBtn.setAttribute("aria-pressed", "false");
+      heroPlayBtn.setAttribute("aria-label", "Tocar vídeo");
+    });
+    /* Toca uma única vez; ao terminar, volta a mostrar a capa (sem loop) */
+    heroVideo.addEventListener("ended", () => {
+      heroVideo.load();
     });
   }
 

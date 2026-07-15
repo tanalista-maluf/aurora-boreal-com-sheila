@@ -55,9 +55,13 @@
   <div class="wrap hero__inner center">
     <img class="hero__logo" id="heroLogo" src="assets/brand/logo-hero.png" alt="Aurora Boreal com Sheila Mello — Uma expedição ao Ártico">
 
-    <!-- Janela de vídeo (depoimento) — autoplay mudo em loop, com botão de som -->
+    <!-- Janela de vídeo (depoimento) — autoplay mudo, toca uma vez e volta pra capa -->
     <div class="hero__videobox" id="heroVideoMount">
-      <video id="heroVideo" src="assets/video/hero-testimonial.mp4" poster="assets/video/hero-testimonial-poster.jpg" autoplay muted loop playsinline></video>
+      <video id="heroVideo" src="assets/video/hero-testimonial.mp4" poster="assets/video/hero-testimonial-poster.jpg" autoplay muted playsinline></video>
+      <button class="hero__videobox-play" id="heroVideoPlay" aria-label="Pausar vídeo" aria-pressed="false">
+        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
       <button class="hero__videobox-mute" id="heroVideoMute" aria-label="Ativar som" aria-pressed="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
       </button>

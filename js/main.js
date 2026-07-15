@@ -11,14 +11,7 @@ const SITE = {
   whatsappMsg: "Olá! Quero me inscrever e garantir minha vaga na expedição Aurora Boreal com Sheila Mello (14–28/nov/2026).",
 
   /* E-mail de contato (usado no rodapé)                         */
-  email: "quero@auroracomsheila.com.br",
-
-  /* Vídeo de depoimento do hero (janela centralizada).
-     O fundo do hero é sempre a foto de aurora; o vídeo aparece numa
-     janela abaixo do logo. Basta preencher o ID do YouTube (parte depois
-     de "watch?v="). Deixe "" para esconder a janela de vídeo.
-     Obs.: o vídeo precisa permitir incorporação/embed.                   */
-  heroVideoId: "fVsONlc3OUY"                        // <-- vídeo provisório (trocar pelo depoimento oficial)
+  email: "quero@auroracomsheila.com.br"
 };
 
 /* ---------- Cronograma oficial (cronograma.jpg) ---------- */
@@ -167,20 +160,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); });
 
   /* --- Vídeo de depoimento do hero (janela) --- */
-  const heroBox = document.getElementById("heroVideoMount");
-  if (heroBox) {
-    if (SITE.heroVideoId) {
-      const id = SITE.heroVideoId;
-      const iframe = document.createElement("iframe");
-      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-      iframe.setAttribute("allowfullscreen", "");
-      iframe.setAttribute("title", "Vídeo de depoimento — Aurora Boreal com Sheila Mello");
-      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1`;
-      heroBox.classList.add("has-video");
-      heroBox.appendChild(iframe);
-    } else {
-      heroBox.style.display = "none";   // sem vídeo, esconde a janela
-    }
+  const heroVideo = document.getElementById("heroVideo");
+  const heroMuteBtn = document.getElementById("heroVideoMute");
+  if (heroVideo && heroMuteBtn) {
+    heroMuteBtn.addEventListener("click", () => {
+      heroVideo.muted = !heroVideo.muted;
+      heroMuteBtn.setAttribute("aria-pressed", String(!heroVideo.muted));
+      heroMuteBtn.setAttribute("aria-label", heroVideo.muted ? "Ativar som" : "Desativar som");
+    });
   }
 
   /* --- Slider da Destino Incomum --- */

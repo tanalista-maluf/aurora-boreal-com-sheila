@@ -11,7 +11,13 @@ const SITE = {
   whatsappMsg: "Olá! Quero me inscrever e garantir minha vaga na expedição Aurora Boreal com Sheila Mello (14–28/nov/2026).",
 
   /* E-mail de contato (usado no rodapé)                         */
-  email: "quero@auroracomsheila.com.br"
+  email: "quero@auroracomsheila.com.br",
+
+  /* Vídeo de depoimento do hero (janela centralizada).
+     Basta preencher o ID do YouTube (parte depois de "watch?v=" ou
+     depois de "youtu.be/"). Deixe "" para esconder a janela de vídeo.
+     Obs.: o vídeo precisa permitir incorporação/embed.                   */
+  heroVideoId: "HW9puYH3NOQ"
 };
 
 /* ---------- Cronograma oficial (cronograma.jpg) ---------- */
@@ -160,30 +166,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); });
 
   /* --- Vídeo de depoimento do hero (janela) --- */
-  const heroVideo = document.getElementById("heroVideo");
-  const heroMuteBtn = document.getElementById("heroVideoMute");
-  const heroPlayBtn = document.getElementById("heroVideoPlay");
-  if (heroVideo && heroMuteBtn && heroPlayBtn) {
-    heroMuteBtn.addEventListener("click", () => {
-      heroVideo.muted = !heroVideo.muted;
-      heroMuteBtn.setAttribute("aria-pressed", String(!heroVideo.muted));
-      heroMuteBtn.setAttribute("aria-label", heroVideo.muted ? "Ativar som" : "Desativar som");
-    });
-    heroPlayBtn.addEventListener("click", () => {
-      if (heroVideo.paused) heroVideo.play(); else heroVideo.pause();
-    });
-    heroVideo.addEventListener("play", () => {
-      heroPlayBtn.setAttribute("aria-pressed", "true");
-      heroPlayBtn.setAttribute("aria-label", "Pausar vídeo");
-    });
-    heroVideo.addEventListener("pause", () => {
-      heroPlayBtn.setAttribute("aria-pressed", "false");
-      heroPlayBtn.setAttribute("aria-label", "Tocar vídeo");
-    });
-    /* Toca uma única vez; ao terminar, volta a mostrar a capa (sem loop) */
-    heroVideo.addEventListener("ended", () => {
-      heroVideo.load();
-    });
+  const heroBox = document.getElementById("heroVideoMount");
+  if (heroBox) {
+    if (SITE.heroVideoId) {
+      const id = SITE.heroVideoId;
+      const iframe = document.createElement("iframe");
+      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("title", "Vídeo de depoimento — Aurora Boreal com Sheila Mello");
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1`;
+      heroBox.classList.add("has-video");
+      heroBox.appendChild(iframe);
+    } else {
+      heroBox.style.display = "none";   // sem vídeo, esconde a janela
+    }
   }
 
   /* --- Slider da Destino Incomum --- */

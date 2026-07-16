@@ -33,9 +33,9 @@ const ROTEIRO = [
   ["22/11","Voo para Tromsø","Voo para Tromsø, via Oslo."],
   ["23/11","Tromsø","A capital do ártico norueguês entre fiordes e montanhas."],
   ["24/11","Tromsø","Catedral Ártica e teleférico com vista panorâmica."],
-  ["25/11","Ice Hotel","Tromsø → Kiruna, na Lapônia sueca: a experiência do lendário Ice Hotel."],
-  ["26/11","Trenó com Huskies","Kiruna → Kittilä → Inari, na Lapônia finlandesa."],
-  ["27/11","Cultura Sámi","Inari: imersão na cultura Sámi."],
+  ["25/11","Cultura Sámi & Renas","Tromsø → Kilpisjärvi → Kiruna, na Lapônia sueca."],
+  ["26/11","Ice Hotel & Trenó com Huskies","Visitando o lendário Ice Hotel → Kittilä, para uma aventura épica na neve."],
+  ["27/11","Sauna & Auroras","Relaxando à beira do lago Inari, na Lapônia finlandesa."],
   ["28/11","Retorno para o Brasil","Fim do roteiro — voos Ivalo → Helsinki → Guarulhos."]
 ];
 

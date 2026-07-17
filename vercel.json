@@ -2,6 +2,13 @@
   "buildCommand": "echo 'Static site - no build needed'",
   "outputDirectory": ".",
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/inscricao/",
+      "destination": "https://forms.gle/msm8FLbKhzcX1Pb3A",
+      "statusCode": 302
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
